@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function insertQuestion(num){
+	alert(num);
+	
+	var str = prompt("사칙연산의 수식을 입력하세요. (예: 100+50)", "");
+	var answer = eval(str); //입력받은 문자열을 수식으로 변환
+	var result = "<font color='red'>" + str + " = " + answer + "</font>";
+	
+	document.getElementById("question").innerHTML = result;
+}
+</script>
+</head>
+<body onload="insertQuestion(222)"> <!-- body 태그 시작시 열리는게 아니라 body 태그를 전부 읽고 실행 -->
+<h1 id="question"></h1>
+
+<script type="text/javascript">
+	insertQuestion(111);
+</script>
+</body>
+</html>
